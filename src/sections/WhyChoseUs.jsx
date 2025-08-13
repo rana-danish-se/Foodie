@@ -387,7 +387,7 @@ const WhyUs = () => {
     <section
       id="why-us"
       ref={sectionRef}
-      className="w-full mt-30 flex flex-col md:flex-row items-center justify-between gap-10 px-6 md:px-16 py-20"
+      className="w-full md:mt-30 flex flex-col md:flex-row items-center justify-between gap-10 px-6 md:px-16 py-20"
     >
       {/* Left Content */}
       <div className="flex flex-col gap-6 md:w-1/2 why-text">
