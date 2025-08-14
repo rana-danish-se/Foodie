@@ -27,3 +27,13 @@ body {
 ::-webkit-scrollbar{
   display: none;
 }
+@font-face {
+  font-family: "Vodka Sans";
+  src: url("/vodka-sans.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.vodka-font {
+  font-family: "Vodka Sans", sans-serif;
+}

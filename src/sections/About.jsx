@@ -98,7 +98,7 @@ const About = () => {
       {/* Text with tilt + glow */}
       <motion.div
         ref={cardRef}
-        className="relative max-w-lg p-6 rounded-xl overflow-hidden border border-white/20 backdrop-blur-sm bg-white/5"
+        className="relative max-w-lg p-3 sm:p-6 rounded-xl overflow-hidden border border-white/20 backdrop-blur-sm bg-white/5"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         variants={textVariant}
@@ -110,7 +110,7 @@ const About = () => {
           className="absolute inset-0 pointer-events-none transition duration-300"
         />
 
-        <h3 className="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+        <h3 className="text-5xl vodka-font  font-bold mb-4 bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-600 bg-clip-text text-transparent">
           About Us
         </h3>
         <p className="text-zinc-300 leading-relaxed">

@@ -387,11 +387,11 @@ const WhyUs = () => {
     <section
       id="why-us"
       ref={sectionRef}
-      className="w-full md:mt-30 flex flex-col md:flex-row items-center justify-between gap-10 px-6 md:px-16 py-20"
+      className="w-full mt-5 md:mt-20 lg:mt-30 flex flex-col lg:flex-row items-center justify-between gap-10 px-6 md:px-16 py-20"
     >
       {/* Left Content */}
-      <div className="flex flex-col gap-6 md:w-1/2 why-text">
-        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+      <div className="flex flex-col gap-6 lg:w-1/2 why-text">
+        <h2 className="text-5xl vodka-font md:text-5xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-600 bg-clip-text text-transparent">
           Why Foodies Choose Foodie
         </h2>
         <p className="text-lg text-gray-300">
@@ -414,7 +414,7 @@ const WhyUs = () => {
       </div>
 
       {/* Right Images */}
-      <div className="relative flex items-center justify-center md:w-1/2 gap-10">
+      <div className="relative flex items-center justify-center mt-10 lg:mt-0 lg:w-1/2 gap-10">
         {/* Glow behind images */}
         <div className="absolute w-72 h-72 bg-yellow-400/30 blur-3xl rounded-full"></div>
 
