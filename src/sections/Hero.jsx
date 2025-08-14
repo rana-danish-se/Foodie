@@ -66,7 +66,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-screen  h-screen flex flex-col relative overflow-hidden">
+    <section className="w-screen  h-[70vh]  lg:h-screen flex flex-col relative overflow-hidden">
       {/* Top bar */}
       <div className="flex  w-full justify-between items-center p-4">
         <Image src="/logo.jpg" width={70} height={70} alt="logo" />
@@ -124,7 +124,7 @@ const Hero = () => {
         width={550} // large default size
         height={550}
         alt="Burger Man"
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 lg:w-[80vw]   max-w-[800px] h-auto"
+        className="absolute w-[90%] bottom-0 left-1/2 -translate-x-1/2 z-0 lg:w-[80%]   max-w-[800px] h-auto"
         priority
       />
     </section>
