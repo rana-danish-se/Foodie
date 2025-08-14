@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import About from '@/sections/About';
+import Features from '@/sections/Features';
 import Hero from '@/sections/Hero';
 import WhyUs from '@/sections/WhyChoseUs';
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <About />
       <WhyUs />
+      <Features/>
     </>
   );
 }
