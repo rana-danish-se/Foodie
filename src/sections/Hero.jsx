@@ -66,7 +66,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-screen  h-[70vh]  lg:h-screen flex flex-col relative overflow-hidden">
+    <section className="w-screen  h-[70vh]  md:h-screen flex flex-col relative overflow-hidden">
       {/* Top bar */}
       <div className="flex  w-full justify-between items-center p-4">
         <Image src="/logo.jpg" width={70} height={70} alt="logo" />
@@ -112,19 +112,27 @@ const Hero = () => {
         </div>
 
         {/* Subheading */}
-        <p
-          ref={paraRef}
-          className="relative z-10  text-2xl text-zinc-700 w-[90%] sm:w-2/3 md:w-1/3 text-center mt-2"
-        >
-          Because great food deserves more than just a star rating.
-        </p>
+        <div className="relative z-10 flex justify-center w-full">
+          {/* Glow behind paragraph - visible only up to md */}
+          <div
+            className="absolute w-[80vw] h-[80vw] bg-gradient-to-r from-yellow-300 via-orange-400 to-orange-600 rounded-full blur-[100px] opacity-50 -z-10 lg:hidden"
+            style={{ top: '-50%', transform: 'translateY(50%)' }}
+          />
+
+          <p
+            ref={paraRef}
+            className="relative text-2xl md:text-slate-900 w-[90%] sm:w-2/3 md:w-1/3 text-center mt-2"
+          >
+            Because great food deserves more than just a star rating.
+          </p>
+        </div>
       </div>
       <Image
         src="/manburger.png"
         width={550} // large default size
         height={550}
         alt="Burger Man"
-        className="absolute w-[90%] bottom-0 left-1/2 -translate-x-1/2 z-0 lg:w-[80%]   max-w-[800px] h-auto"
+        className="absolute w-full h-full  bottom-0 left-1/2 -translate-x-1/2 z-0 md:w-[80%]   max-w-[800px] "
         priority
       />
     </section>
