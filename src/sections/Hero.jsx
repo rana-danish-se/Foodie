@@ -68,7 +68,7 @@ const Hero = () => {
   return (
     <section className="w-screen  h-[70vh]  md:h-screen flex flex-col relative overflow-hidden">
       {/* Top bar */}
-      <div className="flex  w-full justify-between items-center p-4">
+      <div className="flex   w-full justify-between items-center p-4">
         <Image src="/logo.jpg" width={70} height={70} alt="logo" />
         <button className="px-5 py-2 bg-white rounded-full text-black text-sx">
           Try Free
@@ -76,15 +76,17 @@ const Hero = () => {
       </div>
 
       {/* Center Content */}
-      <div className="flex flex-col mt-15 items-center w-full relative">
+      <div className="flex  h-full justify-center flex-col items-center w-full relative">
         {/* Glow behind heading */}
         <div
           ref={glowRef}
-          className="absolute top-1/2 -translate-y-1/2 w-[40vw] h-[40vw] bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-600 rounded-full blur-[150px] opacity-50 z-0"
+          className="absolute top-0 md:top-1/2 left-1/2 -translate-x-1/2 md:-translate-y-1/2 
+             w-[40vw]  h-[40vw] bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-600 
+             rounded-full blur-[150px] opacity-50 z-0"
         />
 
         {/* Heading container */}
-        <div className="relative mt-13  z-10 leading-none">
+        <div className="relative     z-10 leading-none">
           {/* Base white heading */}
           <h1
             ref={baseHeadingRef}
@@ -96,7 +98,7 @@ const Hero = () => {
           {/* Gradient overlay heading */}
           <h1
             aria-hidden
-            className="pointer-events-none absolute inset-0 flex font-bold text-[20vw] sm:text-[15vw] leading-none"
+            className="pointer-events-none absolute  inset-0 flex font-bold text-[20vw] sm:text-[15vw] leading-none"
           >
             {headingText.split('').map((char, i) => (
               <span
@@ -121,7 +123,7 @@ const Hero = () => {
 
           <p
             ref={paraRef}
-            className="relative text-2xl md:text-slate-900 w-[90%] sm:w-2/3 md:w-1/3 text-center mt-2"
+            className="relative text-2xl font-medium text-stone-700 md:text-stone-700 w-[90%] sm:w-2/3 md:w-1/3 text-center "
           >
             Because great food deserves more than just a star rating.
           </p>
