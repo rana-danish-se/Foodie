@@ -67,7 +67,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-screen h-[70vh] md:h-screen flex flex-col relative overflow-hidden">
+    <section className="w-screen h-[40vh] md:h-screen flex flex-col relative overflow-hidden">
       {/* Top bar */}
       <div className="flex w-full justify-between items-center p-4">
         <Image src="/logo.jpg" width={70} height={70} alt="logo" />
@@ -138,10 +138,10 @@ const Hero = () => {
           width={800} // Increased to match max-width
           height={800} // Maintain aspect ratio
           alt="Burger Man"
-          className="w-full h-auto object-contain object-bottom"
+          className="w-full h-auto object-contain object-bottom "
           priority
           quality={95} // Higher quality
-          sizes="(max-width: 768px) 100vw, 80vw" // Responsive sizes
+          sizes="(max-width: 640px) 120vw, (max-width: 768px) 110vw, 80vw" // Responsive sizes
           style={{
             imageRendering: 'crisp-edges',
             WebkitImageRendering: 'crisp-edges',
