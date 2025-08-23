@@ -67,7 +67,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-screen  h-[50vh] sm:h-screen flex flex-col items-center relative overflow-hidden">
+    <section className="w-screen  h-[45vh] sm:h-screen flex flex-col items-center relative overflow-hidden">
       {/* Top bar */}
       <div className="flex  w-full justify-between items-center p-4">
         <Image src="/logo.jpg" width={70} height={70} alt="logo" />
@@ -124,7 +124,7 @@ const Hero = () => {
 
           <p
             ref={paraRef}
-            className="relative text-2xl font-medium text-stone-700 md:text-stone-700 w-[90%] sm:w-2/3  text-center"
+            className="relative text-sm sm:text-2xl font-medium text-stone-700 md:text-stone-700 w-[90%] sm:w-2/3  text-center"
           >
             Because great food deserves more than just a star rating.
           </p>
@@ -132,20 +132,13 @@ const Hero = () => {
       </div>
 
       {/* Fixed burger image with proper sizing and quality settings */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 w-full md:w-[80%] max-w-[800px] h-auto">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-0  w-full md:w-[80%] max-w-[800px] ">
         <Image
           src="/hero.png"
           width={800} 
           height={800} 
           alt="Burger Man"
-          className="w-full h-auto object-contain object-bottom "
-          priority
-          quality={95} 
-          sizes="(max-width: 640px) 120vw, (max-width: 768px) 110vw, 80vw"
-          style={{
-            imageRendering: 'crisp-edges',
-            WebkitImageRendering: 'crisp-edges',
-          }}
+          className="w-full h-auto  object-contain object-bottom "
         />
       </div>
     </section>
