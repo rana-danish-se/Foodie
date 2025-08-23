@@ -134,7 +134,7 @@ const Hero = () => {
       {/* Fixed burger image with proper sizing and quality settings */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 w-full md:w-[80%] max-w-[800px] h-auto">
         <Image
-          src="/manburger.webp"
+          src="/hero.png"
           width={800} 
           height={800} 
           alt="Burger Man"
