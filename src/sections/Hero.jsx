@@ -116,15 +116,9 @@ const Hero = () => {
 
         {/* Subheading */}
         <div className="relative z-10 flex justify-center w-full">
-          {/* Glow behind paragraph - visible only up to md */}
-          {/* <div
-            className="absolute w-[80vw] h-[80vw] bg-gradient-to-r from-yellow-300 via-orange-400 to-orange-600 rounded-full blur-[100px] opacity-50 -z-10 lg:hidden"
-            style={{ top: '-50%', transform: 'translateY(50%)' }}
-          /> */}
-
           <p
             ref={paraRef}
-            className="relative text-xl sm:text-2xl font-medium text-stone-800  w-[90%] sm:w-2/3  text-center"
+            className="relative text-xl sm:text-2xl font-medium text-white bg-black/60 rounded-xl p-2 w-[90%] sm:w-2/3 text-center"
           >
             Because great food deserves more than just a star rating.
           </p>
@@ -132,16 +126,15 @@ const Hero = () => {
       </div>
 
       {/* Fixed burger image with proper sizing and quality settings */}
-    <div className="absolute bottom-0 sm:bottom-0 left-1/2 -translate-x-1/2 z-0 w-full md:w-[80%] max-w-[800px]">
-  <Image
-    src="/hero2.png"
-    width={800}
-    height={800}
-    alt="Burger Man"
-    className="w-full h-[90vh]  object-contain object-bottom "
-  />
-</div>
-
+      <div className="absolute bottom-0 sm:bottom-0 left-1/2 -translate-x-1/2 z-0 w-full md:w-[80%] max-w-[800px]">
+        <Image
+          src="/hero2.png"
+          width={800}
+          height={800}
+          alt="Burger Man"
+          className="w-full h-[90vh]  object-contain object-bottom "
+        />
+      </div>
     </section>
   );
 };

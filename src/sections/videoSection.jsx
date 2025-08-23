@@ -55,7 +55,7 @@ const VideoSection = () => {
     >
       <video
         ref={videoRef}
-        className="w-full sm:w-[450px]  object-cover rounded-lg shadow-4xl border-amber-400 border-2"
+        className="w-full h-[100vh] sm:w-[350px]  object-cover rounded-lg shadow-4xl "
         
         playsInline
         preload="metadata"

@@ -202,14 +202,15 @@
 // };
 
 // export default WhyUs;
-"use client";
+'use client';
 
-import React, { useEffect, useRef } from "react";
-import Image from "next/image";
-import { FaStar, FaSearch, FaHeart, FaWifi } from "react-icons/fa";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import VanillaTilt from "vanilla-tilt";
+import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
+import { FaStar, FaSearch, FaHeart, FaWifi } from 'react-icons/fa';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import VanillaTilt from 'vanilla-tilt';
+import VideoSection from './videoSection';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -223,18 +224,18 @@ const WhyUs = () => {
     const ctx = gsap.context(() => {
       // Text
       gsap.fromTo(
-        ".why-text",
+        '.why-text',
         { opacity: 0, x: -50 },
         {
           opacity: 1,
           x: 0,
           duration: 1,
-          ease: "power3.out",
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'restart reverse restart reverse',
             invalidateOnRefresh: true,
           },
         }
@@ -248,12 +249,12 @@ const WhyUs = () => {
           opacity: 1,
           y: -20, // left higher
           duration: 1,
-          ease: "power3.out",
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'restart reverse restart reverse',
             invalidateOnRefresh: true,
           },
         }
@@ -267,12 +268,12 @@ const WhyUs = () => {
           y: 15, // right lower
           duration: 1,
           delay: 0.2,
-          ease: "power3.out",
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'restart reverse restart reverse',
             invalidateOnRefresh: true,
           },
         }
@@ -288,12 +289,12 @@ const WhyUs = () => {
           y: 0,
           duration: 0.8,
           stagger: 0.2,
-          ease: "power3.out",
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'restart reverse restart reverse',
             invalidateOnRefresh: true,
           },
         }
@@ -310,14 +311,14 @@ const WhyUs = () => {
         max: 15,
         speed: 300,
         glare: true,
-        "max-glare": 0.3,
+        'max-glare': 0.3,
       });
 
       // Bulb setup
-      const bulb = document.createElement("div");
+      const bulb = document.createElement('div');
       bulb.className =
-        "absolute w-40 h-40 bg-yellow-400/30 rounded-full blur-3xl pointer-events-none opacity-0 transition-opacity duration-300";
-      card.style.position = "relative";
+        'absolute w-40 h-40 bg-yellow-400/30 rounded-full blur-3xl pointer-events-none opacity-0 transition-opacity duration-300';
+      card.style.position = 'relative';
       card.appendChild(bulb);
 
       const onMove = (e) => {
@@ -325,10 +326,10 @@ const WhyUs = () => {
         const x = e.clientX - rect.left - 80;
         const y = e.clientY - rect.top - 80;
         bulb.style.transform = `translate(${x}px, ${y}px)`;
-        bulb.style.opacity = "1";
+        bulb.style.opacity = '1';
       };
       const onLeave = () => {
-        bulb.style.opacity = "0";
+        bulb.style.opacity = '0';
       };
 
       // Store refs for cleanup
@@ -336,8 +337,8 @@ const WhyUs = () => {
       card.__onMove = onMove;
       card.__onLeave = onLeave;
 
-      card.addEventListener("mousemove", onMove);
-      card.addEventListener("mouseleave", onLeave);
+      card.addEventListener('mousemove', onMove);
+      card.addEventListener('mouseleave', onLeave);
     });
 
     return () => {
@@ -346,8 +347,8 @@ const WhyUs = () => {
       // Clean up tilt + listeners + bulbs
       cards.forEach((card) => {
         try {
-          card.removeEventListener("mousemove", card.__onMove);
-          card.removeEventListener("mouseleave", card.__onLeave);
+          card.removeEventListener('mousemove', card.__onMove);
+          card.removeEventListener('mouseleave', card.__onLeave);
           if (card.__bulb && card.contains(card.__bulb)) {
             card.removeChild(card.__bulb);
           }
@@ -363,23 +364,23 @@ const WhyUs = () => {
   const reasons = [
     {
       icon: <FaStar size={24} />,
-      title: "Personalized Recommendations",
-      desc: "AI-driven suggestions based on your taste history.",
+      title: 'Personalized Recommendations',
+      desc: 'AI-driven suggestions based on your taste history.',
     },
     {
       icon: <FaSearch size={24} />,
-      title: "Seamless Food Discovery",
-      desc: "Explore by cuisine, mood, or trending dishes.",
+      title: 'Seamless Food Discovery',
+      desc: 'Explore by cuisine, mood, or trending dishes.',
     },
     {
       icon: <FaHeart size={24} />,
-      title: "Real Reviews by Real Foodies",
-      desc: "Every review is verified for authenticity.",
+      title: 'Real Reviews by Real Foodies',
+      desc: 'Every review is verified for authenticity.',
     },
     {
       icon: <FaWifi size={24} />,
-      title: "Offline Access",
-      desc: "View your saved spots even without internet.",
+      title: 'Offline Access',
+      desc: 'View your saved spots even without internet.',
     },
   ];
 
@@ -416,10 +417,17 @@ const WhyUs = () => {
       {/* Right Images */}
       <div className="relative flex items-center justify-center mt-10 lg:mt-0 lg:w-1/2 gap-10">
         {/* Glow behind images */}
-        <div className="absolute w-72 h-72 bg-yellow-400/30 blur-3xl rounded-full"></div>
+        <div className="absolute w-120 h-120 bg-yellow-400/30 blur-3xl rounded-full"></div>
+
+        <div
+          ref={img1WrapperRef}
+          className="relative z-10 group transition-transform duration-300 will-change-transform cursor-pointer hover:scale-115"
+        >
+          <VideoSection />
+        </div>
 
         {/* Left Image (higher) */}
-        <div
+        {/* <div
           ref={img1WrapperRef}
           className="relative z-10 group transition-transform duration-300 will-change-transform cursor-pointer hover:scale-115"
         >
@@ -431,10 +439,10 @@ const WhyUs = () => {
             className="rounded-2xl shadow-lg select-none pointer-events-none hover:scale-120"
             draggable={false}
           />
-        </div>
+        </div> */}
 
         {/* Right Image (lower) */}
-        <div
+        {/* <div
           ref={img2WrapperRef}
           className="relative z-20 group transition-transform duration-300 will-change-transform cursor-pointer hover:scale-115"
         >
@@ -446,7 +454,7 @@ const WhyUs = () => {
             className="rounded-2xl shadow-lg select-none pointer-events-none"
             draggable={false}
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );
