@@ -5,7 +5,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from 'react-icons/fa';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
 const Footor = () => {
   return (
@@ -65,10 +65,6 @@ const Footor = () => {
               <span>Lahore, Pakistan</span>
             </li>
             <li className="flex items-center gap-3">
-              <FaPhoneAlt className="text-yellow-400" />
-              <span>+92 300 1234567</span>
-            </li>
-            <li className="flex items-center gap-3">
               <FaEnvelope className="text-yellow-400" />
               <span>info@foodie.io</span>
             </li>
@@ -79,7 +75,7 @@ const Footor = () => {
       {/* Footer Bottom Line */}
       <div className="mt-10 border-t border-white/10 pt-5 text-center text-gray-500 text-sm">
         © {new Date().getFullYear()}
-        Foodie Media Group, Inc. 
+         Foodie Media Group, Inc. 
       </div>
     </footer>
   );

@@ -67,9 +67,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-screen h-[40vh] md:h-screen flex flex-col relative overflow-hidden">
+    <section className="w-screen  h-[50vh] sm:h-screen flex flex-col items-center relative overflow-hidden">
       {/* Top bar */}
-      <div className="flex w-full justify-between items-center p-4">
+      <div className="flex  w-full justify-between items-center p-4">
         <Image src="/logo.jpg" width={70} height={70} alt="logo" />
         <button className="px-5 py-2 bg-white rounded-full text-black text-sx">
           Try Free
@@ -77,7 +77,7 @@ const Hero = () => {
       </div>
 
       {/* Center Content */}
-      <div className="flex h-full justify-center flex-col items-center w-full relative">
+      <div className="flex h-full  justify-center mt-20 flex-col items-center w-fit relative">
         {/* Glow behind heading */}
         <div
           ref={glowRef}
@@ -91,7 +91,7 @@ const Hero = () => {
           {/* Base white heading */}
           <h1
             ref={baseHeadingRef}
-            className="text-[20vw] vodka-font sm:text-[15vw] font-bold text-white select-none"
+            className="text-[20vw] vodka-font sm:text-[13vw] font-bold text-white select-none"
           >
             {headingText}
           </h1>
@@ -99,7 +99,7 @@ const Hero = () => {
           {/* Gradient overlay heading */}
           <h1
             aria-hidden
-            className="pointer-events-none absolute inset-0 flex font-bold text-[20vw] sm:text-[15vw] leading-none"
+            className="pointer-events-none absolute inset-0 flex font-bold text-[20vw] sm:text-[13vw] leading-none"
           >
             {headingText.split('').map((char, i) => (
               <span
@@ -124,7 +124,7 @@ const Hero = () => {
 
           <p
             ref={paraRef}
-            className="relative text-2xl font-medium text-stone-700 md:text-stone-700 w-[90%] sm:w-2/3 md:w-1/3 text-center"
+            className="relative text-2xl font-medium text-stone-700 md:text-stone-700 w-[90%] sm:w-2/3  text-center"
           >
             Because great food deserves more than just a star rating.
           </p>
@@ -135,13 +135,13 @@ const Hero = () => {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 w-full md:w-[80%] max-w-[800px] h-auto">
         <Image
           src="/manburger.webp"
-          width={800} // Increased to match max-width
-          height={800} // Maintain aspect ratio
+          width={800} 
+          height={800} 
           alt="Burger Man"
           className="w-full h-auto object-contain object-bottom "
           priority
-          quality={95} // Higher quality
-          sizes="(max-width: 640px) 120vw, (max-width: 768px) 110vw, 80vw" // Responsive sizes
+          quality={95} 
+          sizes="(max-width: 640px) 120vw, (max-width: 768px) 110vw, 80vw"
           style={{
             imageRendering: 'crisp-edges',
             WebkitImageRendering: 'crisp-edges',
