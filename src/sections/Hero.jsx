@@ -67,7 +67,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-screen  h-[45vh] sm:h-screen flex flex-col items-center relative overflow-hidden">
+    <section className="w-screen h-[70vh]  md:h-screen flex flex-col items-center relative overflow-hidden">
       {/* Top bar */}
       <div className="flex  w-full justify-between items-center p-4">
         <Image src="/logo.jpg" width={70} height={70} alt="logo" />
@@ -77,7 +77,7 @@ const Hero = () => {
       </div>
 
       {/* Center Content */}
-      <div className="flex h-full  justify-center mt-20 flex-col items-center w-fit relative">
+      <div className="flex h-full   justify-center mt-20 flex-col items-center w-fit relative">
         {/* Glow behind heading */}
         <div
           ref={glowRef}
@@ -117,14 +117,14 @@ const Hero = () => {
         {/* Subheading */}
         <div className="relative z-10 flex justify-center w-full">
           {/* Glow behind paragraph - visible only up to md */}
-          <div
+          {/* <div
             className="absolute w-[80vw] h-[80vw] bg-gradient-to-r from-yellow-300 via-orange-400 to-orange-600 rounded-full blur-[100px] opacity-50 -z-10 lg:hidden"
             style={{ top: '-50%', transform: 'translateY(50%)' }}
-          />
+          /> */}
 
           <p
             ref={paraRef}
-            className="relative text-sm sm:text-2xl font-medium text-stone-700 md:text-stone-700 w-[90%] sm:w-2/3  text-center"
+            className="relative text-xl sm:text-2xl font-medium text-stone-800  w-[90%] sm:w-2/3  text-center"
           >
             Because great food deserves more than just a star rating.
           </p>
@@ -132,15 +132,16 @@ const Hero = () => {
       </div>
 
       {/* Fixed burger image with proper sizing and quality settings */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-0  w-full md:w-[80%] max-w-[800px] ">
-        <Image
-          src="/hero.png"
-          width={800} 
-          height={800} 
-          alt="Burger Man"
-          className="w-full h-auto  object-contain object-bottom "
-        />
-      </div>
+    <div className="absolute bottom-0 sm:bottom-0 left-1/2 -translate-x-1/2 z-0 w-full md:w-[80%] max-w-[800px]">
+  <Image
+    src="/hero2.png"
+    width={800}
+    height={800}
+    alt="Burger Man"
+    className="w-full h-[90vh]  object-contain object-bottom "
+  />
+</div>
+
     </section>
   );
 };
