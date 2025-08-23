@@ -67,7 +67,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-screen h-[70vh]  md:h-screen flex flex-col items-center relative overflow-hidden">
+    <section className="w-screen h-[70vh]  md:h-screen flex flex-col  items-center relative overflow-hidden">
       {/* Top bar */}
       <div className="flex  w-full justify-between items-center p-4">
         <Image src="/logo.jpg" width={70} height={70} alt="logo" />
@@ -118,7 +118,7 @@ const Hero = () => {
         <div className="relative z-10 flex justify-center w-full">
           <p
             ref={paraRef}
-            className="relative text-xl sm:text-2xl font-medium text-white bg-black/60 rounded-xl p-2 w-[90%] sm:w-2/3 text-center"
+            className="relative text-2xl tracking-wider sm:text-3xl font-medium text-outline-yellow w-[90%] sm:w-2/3 text-center"
           >
             Because great food deserves more than just a star rating.
           </p>

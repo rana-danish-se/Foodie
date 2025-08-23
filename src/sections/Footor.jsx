@@ -62,11 +62,11 @@ const Footor = () => {
           <ul className="space-y-3 text-gray-400">
             <li className="flex items-center gap-3">
               <FaMapMarkerAlt className="text-yellow-400" />
-              <span>Lahore, Pakistan</span>
+              <span>United State</span>
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-yellow-400" />
-              <span>info@foodie.io</span>
+              <span>contact@foodie.io</span>
             </li>
           </ul>
         </div>
@@ -74,8 +74,8 @@ const Footor = () => {
 
       {/* Footer Bottom Line */}
       <div className="mt-10 border-t border-white/10 pt-5 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()}
-         Foodie Media Group, Inc. 
+        © {new Date().getFullYear() }
+         {"   "}Foodie Media Group, Inc. 
       </div>
     </footer>
   );

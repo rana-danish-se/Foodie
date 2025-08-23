@@ -5,7 +5,7 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="w-screen md:mt-20 p-4  mb-10 flex flex-col"
+      className="w-screen  overflow-x-hidden md:mt-20 p-4  mb-10 flex flex-col"
     >
       <div className="flex flex-col  ">
         <h2 className="text-5xl vodka-font md:text-7xl text-center font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-600 bg-clip-text text-transparent">
