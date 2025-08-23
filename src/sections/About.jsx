@@ -67,7 +67,7 @@ const About = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="md:mt-20  overflow-x-hidden  mt-10 flex flex-col md:flex-row justify-center items-center w-full p-5 gap-10 relative"
+      className="md:mt-10  overflow-x-hidden  mt-10 flex flex-col md:flex-row justify-center items-center w-full p-5 gap-10 relative"
     >
       {/* Images with animations */}
       <motion.div className="relative flex gap-4" animate={imgControls}>

@@ -116,12 +116,14 @@ const Hero = () => {
 
         {/* Subheading */}
         <div className="relative z-10 flex justify-center w-full">
-          <p
-            ref={paraRef}
-            className="relative text-2xl tracking-wider sm:text-3xl font-medium text-outline-yellow w-[90%] sm:w-2/3 text-center"
-          >
-            Because great food deserves more than just a star rating.
-          </p>
+          <div className="relative z-10 flex justify-center w-full">
+            <p
+              ref={paraRef}
+              className="relative text-xl sm:text-4xl font-bold tracking-wider text-outline-black-orange w-[90%] sm:w-2/3 text-center"
+            >
+              Because great food deserves more than just a star rating.
+            </p>
+          </div>
         </div>
       </div>
 
